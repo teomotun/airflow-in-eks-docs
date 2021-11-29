@@ -4,13 +4,13 @@ Guide on how to setup eks, fluxcd and airflow in aws
 # Repos:
 ```
 airflow dags:
-https://github.com/EdwinGuo/airflow-dags
+https://github.com/teomotun/airflow-dags
 
 cluster deployment configs:
-https://github.com/EdwinGuo/airflow-eks-config
+https://github.com/teomotun/airflow-eks-config
 
 helm charts for airflow
-https://github.com/EdwinGuo/airflow-eks-helm-chart
+https://github.com/teomotun/airflow-eks-helm-chart
 ```
 
 
