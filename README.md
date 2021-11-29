@@ -113,6 +113,7 @@ helm repo add fluxcd https://charts.fluxcd.io
 
 helm upgrade -i flux fluxcd/flux \
 --set git.url=git@github.com:teomotun/airflow-eks-config \
+--set git.branch=main \
 --namespace flux
 
 helm upgrade -i helm-operator fluxcd/helm-operator --wait \
