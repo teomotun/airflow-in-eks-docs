@@ -155,7 +155,9 @@ user = PasswordUser(models.User())
 user.username = 'test_user'
 user.email = 'test_user@mydomain'
 user.password = 'tH1sIsAP@ssw0rd'
+# Session allows us to access session database within postgres
 session = settings.Session()
+# If user doesn't exist add user
 user_exists = session.query(models.User.id).filter_by(username=user.username).scalar() is not None
 if not user_exists:
    session.add(user)
@@ -167,6 +169,7 @@ session.close()
 generate the token
 import base64
 
+# generate token so we can authorize through the web url
 def generate_token(user, password):
 	userpass = user + ':' + password
 	token = base64.b64encode(userpass.encode()).decode()
