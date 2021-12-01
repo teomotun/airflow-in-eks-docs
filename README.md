@@ -174,6 +174,8 @@ def generate_token(user, password):
 	userpass = user + ':' + password
 	token = base64.b64encode(userpass.encode()).decode()
 	return 'token ' + token
+	
+generate_token(user.username, user.password)
 ```
 
 # to trigger airflow job with auth
