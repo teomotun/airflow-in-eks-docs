@@ -160,13 +160,15 @@ session = settings.Session()
 # If user doesn't exist add user
 user_exists = session.query(models.User.id).filter_by(username=user.username).scalar() is not None
 if not user_exists:
+   print("Adding new user")
    session.add(user)
    session.commit()
-
+else:
+   print("User Exists")
 session.close()
 
------- generate token----------
-generate the token
+# ------ generate token----------
+# generate the token
 import base64
 
 # generate token so we can authorize through the web url
